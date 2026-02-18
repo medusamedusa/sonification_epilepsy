@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Mannone"
+  given-names: "Maria"
+  orcid: "https://orcid.org/0000-0003-3606-3436"
+- family-names: "Itaboraí"
+  given-names: "Paulo Vitor"
+  orcid: "https://orcid.org/0000-0002-4956-2958"
+- family-names: "Hamido"
+  given-names: "Omar Costa"
+  orcid: "https://orcid.org/0000-0001-5077-853X"
+title: "Quantum Seizures: codes to sonify data from epilepsy, and quantum-simulated data."
+version: 2.0.0
+doi: 10.5281/zenodo.18679847
+date-released: 2026-02-18
+url: "https://github.com/medusamedusa/sonification_epilepsy"
