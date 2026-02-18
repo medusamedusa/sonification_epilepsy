@@ -26,4 +26,4 @@ jobs:
           git remote add public https://x-access-token:${{ secrets.API_TOKEN_QS }}@github.com/medusamedusa/sonification_epilepsy.git
 
           # 3. Push
-          git push public main --force
+          git push public main
