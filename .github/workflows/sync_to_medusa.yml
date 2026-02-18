@@ -1,0 +1,29 @@
+name: Sync to Public Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Private Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Push to Public Repo
+        run: |
+          # 1. Configure git user
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
+          # 2. Add remote using "x-access-token" as the username
+          # This syntax forces Git to use the token as a password credential
+          git remote add public https://x-access-token:${{ secrets.API_TOKEN_QS }}@github.com/medusamedusa/sonification_epilepsy.git
+
+          # 3. Push
+          git push public main
